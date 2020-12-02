@@ -43,13 +43,12 @@ body {
 }
 
 .hl-logo {
-    margin: -20vh 0 0 0;
     display: block;
-    width: 30vw;
+    width: 90vw;
 }
 
 .main-text {
-    margin: -20vh 0 0 0;
+    margin: -10vh 0 0 0;
     display: block;
     font-size: 2em; 
 }
@@ -137,3 +136,19 @@ body {
     }
   }
   
+
+@media (min-width: 641px) {
+    .hl-logo {
+        margin: -20vh 0 0 0;
+        width: 30vw;
+    }
+    .hl-logo {
+        width: 30vw;
+    }
+}
+
+@media (min-width: 1100px) {
+    .main-text {
+        margin: -20vh 0 0 0;
+    }
+}
