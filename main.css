@@ -2,12 +2,12 @@
     font-family: 'Advent Pro';
     font-style: normal;
     font-weight: 400;
-    src: url('hyperlinklondon/fonts/advent-pro-v11-latin-regular.eot'), /* IE9 Compat Modes */
-         url('hyperlinklondon/fonts/advent-pro-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('hyperlinklondon/fonts/advent-pro-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('hyperlinklondon/fonts/advent-pro-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
-         url('hyperlinklondon/fonts/advent-pro-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('hyperlinklondon/fonts/advent-pro-v11-latin-regular.svg#AdventPro') format('svg'); /* Legacy iOS */
+    src: url('fonts/advent-pro-v11-latin-regular.eot'), /* IE9 Compat Modes */
+         url('fonts/advent-pro-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/advent-pro-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/advent-pro-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/advent-pro-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/advent-pro-v11-latin-regular.svg#AdventPro') format('svg'); /* Legacy iOS */
          
 }
 
