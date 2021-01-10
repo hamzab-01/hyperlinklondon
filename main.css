@@ -26,129 +26,377 @@ html {
 }
 
 body {
-    height: 100vh;
     margin: 0;
+    padding: 0;
     background-color: #000;
     color: #fff;
     font-family: Advent Pro;
+    overflow: hidden;
 }
 
-.container {
+.nav-container {
+    padding: 1vh 0 0 0;
+    background-color: #000;
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+}
+
+.hl-nav-logo {
+    height: 5em;
+    width: auto;
+}
+
+.nav-link {
+    margin: 0.5em 0;
+    padding: 0.2em 0.4em;
+    font-weight: bolder;
+    font-size: 1.6em;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.nav-active {
+    background-color: #fff;
+    color: #000;
+}
+
+.text-medium {
+    font-size: 1.4em;
+}
+
+.pg-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: row;
+	color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 5rem;
+}
+
+[data-anchor="home"] {
+    background-image: url("img/home-bg.jpg");
+}
+
+/* [data-anchor="technology"] {
+    background-image: url("img/Hyperloop-reduced 1.png");
+} */
+
+.home-text {
+    position: absolute;
+    bottom: 1vh;
+    right: 3vw;
+    font-size: 2em;
+    /* font-weight: bold; */
+    /* text-shadow: 2px 2px 4px #000000; */
+}
+
+li {
+    list-style: disc;
+}
+
+a {
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color:  #ff004c;
+}
+
+/* Nav right */
+
+nav {
     height: 100vh;
+    position: fixed;
+    top: 0;
+    /* z-index: 100; */
+    right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
-.hl-logo {
-    display: block;
-    width: 90vw;
-}
-
-.main-text {
-    margin: -10vh 0 0 0;
-    display: block;
-    font-size: 2em; 
-}
-
-
-.loading {
-    margin: 3vh 0 0 0;
-}
-
-.dot {
-    width: 24px;
-    height: 24px;
+nav ul li a span {
     background: #fff;
+}
+
+nav li {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 16px;
+    position: relative;
+}
+
+nav span:after {
+    background: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    content: "";
+    display: block;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
     border-radius: 100%;
+    transition: 0.3s;
+}
+
+nav li .active span {
+    background: #fff;
+    position: absolute;
+}
+
+nav li .active span:after {
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav ul li a.active span,
+nav ul li:hover a.active span {
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+}
+
+nav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    transition: all 0.1s ease-in-out;
+}
+
+nav ul li:hover a span {
+    width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;
+}
+
+
+/* Timeline */
+
+/* .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    background-image: linear-gradient(180deg, #9B002F, #0017BF);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.tl-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.tl-dot-red::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -33px;
+    background-color: #000;
+    border: 8px solid#9B002F;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.tl-dot-white::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -33px;
+    background-color: #000;
+    border: 8px solid #fff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.tl-dot-blue::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -33px;
+    background-color: #000;
+    border: 8px solid#0017BF;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.tl-left {
+    left: -30%;
+    margin: 0 0 0 180px;
+}
+
+.tl-left::after{
+    right: -4%;
+}
+
+.tl-right {
+    left: 50%;
+}
+
+.tl-right::after {
+    left: -7%;
+}
+
+.tl-content {
+    padding: 5px 10px;
+    background-color: #9B002F;
+    position: relative;
+}
+*/
+
+/* Timeline */
+
+/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+ body {
+	 font-family: 'Open Sans', sans-serif;
+	 margin: 0;
+	 padding: 0 4em;
+} */
+
+.timeline {
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.timeline p {
+    font-size: 1em;
+    line-height: 1.75em;
+    border-top: 5px solid;
+    /* border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%); */
+    border-image: linear-gradient(90deg, #9B002F 0%, #0017BF 100%);
+    border-image-slice: 1;
+    border-width: 5px;
+    margin: 0;
+    padding: 40px;
+    counter-increment: tl-count;
+    position: relative;
+    /* color: #34435e; */
+}
+
+.timeline p:before {
+    content: counter(tl-count);
+    position: absolute;
+    border-radius: 50%;
+    /* padding: 10px; */
+    height: 1.25em;
+    width: 1.25em;
+    background-color: #34435e;
+    text-align: center;
+    line-height: 1.25em;
+    color: #fff;
+    font-size: 1em;
+}
+
+.timeline p:nth-child(odd) {
+	 border-right: 5px solid;
+	 padding-left: 0;
+}
+
+.timeline p:nth-child(odd):before {
+	 left: 100%;
+	 margin-left: -13px;
+}
+ 
+.timeline p:nth-child(even) {
+	 border-left: 5px solid;
+	 padding-right: 0;
+}
+ 
+.timeline p:nth-child(even):before {
+	 right: 100%;
+	 margin-right: -11px;
+}
+
+.timeline p:first-child {
+	 border-top: 0;
+	 border-top-right-radius: 0;
+	 border-top-left-radius: 0;
+}
+
+.timeline p:last-child {
+	 border-bottom-right-radius: 0;
+	 border-bottom-left-radius: 0;
+}
+ 
+
+/* Icons */
+.icon::before {
+    font-size: 3em;
     display: inline-block;
-    animation: slide 5s infinite;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
 }
 
-.dot:nth-child(1) {
-    animation-delay: 0.5s;
-    background: #0016BF;
-  }
-  .dot:nth-child(2) {
-    animation-delay: 1s;
-    background: #2A1096;
-  }
-  .dot:nth-child(3) {
-    animation-delay: 1.5s;
-    background: #440C7D;
-  }
-  .dot:nth-child(4) {
-    animation-delay: 2s;
-    background: #620762;
-  }
-  .dot:nth-child(5) {
-    animation-delay: 2.5s;
-    background: #9B002E;
-  }
-  @-moz-keyframes slide {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.3;
-      transform: scale(2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.3;
-      transform: scale(2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @-o-keyframes slide {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.3;
-      transform: scale(2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @keyframes slide {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.3;
-      transform: scale(2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-
-@media (min-width: 641px) {
-    .hl-logo {
-        margin: -20vh 0 0 0;
-        width: 30vw;
-    }
-    .hl-logo {
-        width: 30vw;
-    }
+.instagram::before {
+    font-family: "Font Awesome 5 Brands"; content: "\f16d";
 }
 
-@media (min-width: 1100px) {
-    .main-text {
-        margin: -20vh 0 0 0;
-    }
+.facebook::before {
+    font-family: "Font Awesome 5 Brands"; content: "\f082";
+}
+
+.linkedin::before {
+    font-family: "Font Awesome 5 Brands"; content: "\f08c";
 }
