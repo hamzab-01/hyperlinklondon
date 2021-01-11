@@ -83,6 +83,8 @@ body {
 
 [data-anchor="home"] {
     background-image: url("img/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* [data-anchor="technology"] {
@@ -91,7 +93,7 @@ body {
 
 .home-text {
     position: absolute;
-    bottom: 1vh;
+    top: 10vh;
     right: 3vw;
     font-size: 2em;
     /* font-weight: bold; */
