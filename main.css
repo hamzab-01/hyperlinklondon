@@ -87,7 +87,7 @@ a:hover {
 
 /* Nav top */
 
-.navbar {
+.navbar, .navbar-menu {
     padding: 1vh 0 0 1vw;
     background-color: #000;
     top: 0;
