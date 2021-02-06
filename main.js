@@ -1,18 +1,25 @@
-var anchors = [].slice.call(document.querySelectorAll(".level-item > a"));
-
-var pageable = new Pageable(".pg-container", {
-    animation: 400,
-    delay: 100,
-    onInit: init,
-    onFinish: update,
-});
-
-function init() {
-
+function toggleNav() {
+    var burger = document.querySelector('.navbar-burger');
+    var menu = document.querySelector('#'+burger.dataset.target);
+    burger.addEventListener('click', function() {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+    });
 }
 
-function update() {
-    anchors.forEach((element, i) => {
-        element.classList.toggle("nav-active", i === this.index+1)
-    });
+
+
+
+var scrollButton = document.getElementById("scrollButton");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+}
+
+function scrollToTop() {
+    document.documentElement.scrollTop = 0
 }

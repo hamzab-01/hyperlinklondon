@@ -2,212 +2,215 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/png" href="hyperlink-logo.png">
-    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" crossorigin="anonymous" />
-    <title>Hyperlink London</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="main.css">
+
+  <link rel="icon" type="image/png" href="img/hyperlink-logo.png">
+  <title>Hyperlink London</title>
 </head>
 
 <body>
-    <div class="nav-container columns">
-        <div class="column is-half">
-            <div class="level">
-                <p class="level-item has-text-centered">
-                    <a href="/">
-                    <img draggable="false" class="hl-nav-logo" src="hyperlink-nav-logo.png" alt="">
-                    </a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <a class="nav-link" href="#home">Home</a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <a class="nav-link" href="#about">About</a>
-                </p>
-                <p class="level-item has-text-centered">
-                  <a class="nav-link" href="#technology">Technology</a>
-                </p>
-                <p class="level-item has-text-centered">
-                  <a class="nav-link" href="#sponsors">Sponsors</a>
-                </p>
-                <p class="level-item has-text-centered">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </p>
-            </div>        
-        </div>
+  <button onclick="scrollToTop()" id="scrollButton" style="display: block;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+    </svg>
+  </button>
+  <nav class="navbar">
+    <div class="navbar-brand my-3 mx-5 pt-3">
+      <a class="navbar-logo" href="#">
+        <img draggable="false" src="img/hyperlink-nav-logo.png" alt="Logo">
+      </a>
+      <a class="navbar-burger mt-3" data-target="navbarMenu" onclick="toggleNav()">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+      </a>
     </div>
-    <div class="pg-container">
-        <div class="text-medium">
-            <div data-anchor="home" class="pg-section">
-              <span class="home-text">Developing a link to fast and sustainable travel.</span>
-            </div>
-            <div data-anchor="about" class="pg-section">
-              <div class="columns">
-                <div class="column">
-                  <div class="columns">
-                    <div style="align-self: center;" class="column is-two-fifths">
-                      <p>
-                        Hyperlink is London’s first student team focused on developing effective Hyperloop technology. It was founded in September 2020 and operates from Queen Mary University of London.
-                      </p>
-                      <br>
-                      <p>
-                        The team consists of 42 members from 3 different universities - Queen Mary University of London, Imperial College London and University College London.
-                      </p><br>
-                      <p>
-                        Our vision is to accelerate the implementation of the Hyperloop system in Europe. We aim to achieve it through attending international competitions as well as researching the engineering and economic viability of different concepts.
-                      </p>
-                    </div>
-                    <div class="column">
-                      <img style="align-self: center;" src="img/team-tree.png"/>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <p>
-                      With over 40 members from an extensive range of ethnic and cultural backgrounds, our Hyperloop team comprises 12 nationalities, across 5 continents and a total of 20 different languages spoken.
-                    </p><br>
-                    <p>
-                      There are 11 different courses studied by Hyperlink members making us a highly interdisciplinary team with extended knowledge on a broad number of topics.
-                    </p>
-                  </div>
-                </div>
+    <div id="navbarMenu" class="navbar-menu py-5">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#about">
+          About
+        </a>
+        <a class="navbar-item" href="#technology">
+          Technology
+        </a>
+        <a class="navbar-item" href="#sponsors">
+          Sponsors
+        </a>
+        <a class="navbar-item" href="#contact">
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="home-bg"><span class="home-text">Developing a link to fast and sustainable travel.</span></div>
+  <div class="container my-6 px-5">
+    <div class="text-medium">
+      <div id="about">
+        <span class="is-size-2">About</span>
+        <hr>
+        <div class="columns">
+          <div class="column">
+            <div class="columns">
+              <div style="align-self: center;" class="column is-two-fifths">
+                <p>
+                  Hyperlink is London’s first student team focused on developing effective Hyperloop technology. It was
+                  founded in September 2020 and operates from Queen Mary University of London.
+                </p>
+                <br>
+                <p>
+                  The team consists of 42 members from 3 different universities - Queen Mary University of London,
+                  Imperial College London and University College London.
+                </p><br>
+                <p>
+                  Our vision is to accelerate the implementation of the Hyperloop system in Europe. We aim to achieve it
+                  through attending international competitions as well as researching the engineering and economic
+                  viability of different concepts.
+                </p>
+              </div>
+              <div class="column">
+                <img style="align-self: center;" src="img/team-tree.png" />
               </div>
             </div>
-            <div data-anchor="technology" class="pg-section">
-              <div class="columns">
-                <div class="column">
-                  <div class="columns">
-                    <div style="align-self: center;" class="column is-one-third mt-6">
-                       <!-- <div class="timeline">
-                        <div class="tl-container tl-left tl-dot-red">
-                          <div class="tl-content">
-                            <h2>Jul 2020</h2>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                          </div>
-                        </div>
-                        <div class="tl-container tl-right tl-dot-red">
-                          <div class="tl-content">
-                            <h2>Sep 2020</h2>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                          </div>
-                        </div>
-                        <div class="tl-container tl-left tl-dot-white">
-                          <div class="tl-content">
-                            <h2>Dec 2020</h2>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                          </div>
-                        </div>
-                        <div class="tl-container tl-right tl-dot-blue">
-                          <div class="tl-content">
-                            <h2>Feb 2021</h2>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                          </div>
-                        </div>
-                        <div class="tl-container tl-left tl-dot-blue">
-                          <div class="tl-content">
-                            <h2>May 2021</h2>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                          </div>
-                        </div>
-                    </div> -->
-                    
-                    <div class="timeline">
-                      <p>19.10.20 - First Team Meeting ✔️</p>
-                      <p>13.12.20 - European Hyperloop Week Application Completed ✔️</p>
-                      <p>28.12.20 - Final Design Choices</p>
-                      <p>08.03.21 - Final CAD Model</p>
-                      <p>21.03.21 - Manufacturing Begins</p>
-                      <p>14.06.2021 - Pod Delivery</p>
-                    </div>
+            <div class="column px-0">
+              <p>
+                With over 40 members from an extensive range of ethnic and cultural backgrounds, our Hyperloop team
+                comprises 12 nationalities, across 5 continents and a total of 20 different languages spoken.
+              </p><br>
+              <p>
+                There are 11 different courses studied by Hyperlink members making us a highly interdisciplinary team
+                with extended knowledge on a broad number of topics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div id="technology">
+        <span class="is-size-2">Technology</span>
+        <hr>
+        <div class="columns">
+          <div class="column">
+            <div class="columns">
+              <div style="align-self: center;" class="column is-one-third mt-6">
+                <div class="timeline">
+                  <p>19.10.20 - First Team Meeting ✔️</p>
+                  <p>13.12.20 - European Hyperloop Week Application Completed ✔️</p>
+                  <p>28.12.20 - Final Design Choices</p>
+                  <p>08.03.21 - Final CAD Model</p>
+                  <p>21.03.21 - Manufacturing Begins</p>
+                  <p>14.06.2021 - Pod Delivery</p>
+                </div>
 
-                    </div>
-                    <div style="align-self: center;" class="column mt-6">
-                      <p>
-                        Hyperloop is the proposed high-speed passenger and freight transportation system, consisting of a network of near-vacuum tubes and levitating pods. Due to virtually no friction or drag being present, the vehicles can travel up to 1200 km/h and maintain a much greater energetic efficiency than airplanes.
-                      </p><br>
-                      <p>
-                        Hyperloop is going to be the most effective on medium length routes, such as London to Edinburgh.
-                      </p>
-                      <div class="columns mt-6">
-                        <div class="column">
-                          <img style="border: 5px solid #FFF; border-radius: 50%;" src="img/pod-icon.png"/>
-                          <center>We are developing and building a fully operational Hyperloop pod</center>
-                        </div>
-                        <div class="column">
-                          <img style="border: 5px solid #FFF; border-radius: 50%;" src="img/research-icon.png"/>
-                          <center>We are researching different aspects of the system, such as making it energy-efficient and safe for humans</center>
-                        </div>
-                        <div class="column">
-                          <img style="border: 5px solid #FFF; border-radius: 50%;" src="img/expansion-icon.png"/>
-                          <center>We are creating a truly London-wide initiative by uniting the city’s best universities and most ambitious students</center>
-                        </div>
-                      </div>
-                    </div>
+              </div>
+              <div style="align-self: center;" class="column mt-6">
+                <p>
+                  Hyperloop is the proposed high-speed passenger and freight transportation system, consisting of a
+                  network of near-vacuum tubes and levitating pods. Due to virtually no friction or drag being present,
+                  the vehicles can travel up to 1200 km/h and maintain a much greater energetic efficiency than
+                  airplanes.
+                </p><br>
+                <p>
+                  Hyperloop is going to be the most effective on medium length routes, such as London to Edinburgh.
+                </p>
+                <div class="columns mt-6">
+                  <div class="column mx-5">
+                    <img style="border: 5px solid #FFF; border-radius: 50%;" src="img/pod-icon.png" />
+                    <center>We are developing and building a fully operational Hyperloop pod</center>
                   </div>
-                  <div class="column">
-                    
+                  <div class="column mx-5">
+                    <img style="border: 5px solid #FFF; border-radius: 50%;" src="img/research-icon.png" />
+                    <center>We are researching different aspects of the system, such as making it energy-efficient and
+                      safe for humans</center>
+                  </div>
+                  <div class="column mx-5">
+                    <img style="border: 5px solid #FFF; border-radius: 50%;" src="img/expansion-icon.png" />
+                    <center>We are creating a truly London-wide initiative by uniting the city’s best universities and
+                      most ambitious students</center>
                   </div>
                 </div>
               </div>
             </div>
-            <div data-anchor="sponsors" class="pg-section">
-              <div class="columns">
-                <div class="column has-text-centered">
-                    <p>
-                    Hyperlink is set on designing and constructing the best possible pod and help to improve the technical viability of the Hyperloop technology. The support of our partners and sponsors are essential for us to achieve our goals. In return for sponsorship we are offering various advertising opportunities and the possibility to be in touch with students of academic excellence, the leading engineers of tomorrow.
-                    </p><br>
-                    <p>
-                    Let’s share our knowledge and build a sustainable future together 
-                    </p><br>
-                    <p>
-                    For enquiries, please contact <a class="sponsor-email" href="mailto:partnerships.hyperlink@qmsu.org">partnerships.hyperlink@qmsu.org</a>  
-                    </p>
-                </div>
-              </div>
+            <div class="column">
+
             </div>
-            <div data-anchor="contact" class="pg-section">
-              <div class="columns">
-                <div class="column">
-                  <p>
-                    Queen Mary University of London<br>
-                    School of Engineering and Materials Science<br>
-                    Mile End Rd, Bethnal Green<br>
-                    London E1 4NS<br>
-                    United Kingdom<br>
-                  </p><br>
-                  <iframe width="600" height="500" src="https://maps.google.com/maps?q=Queen%20Mary%20University%20of%20London%20%20%20%20%20%20%20%20%20%20%20%20%20School%20of%20Engineering%20and%20Materials%20Science%20Mile%20End%20Rd,%20Bethnal%20Green%20London%20E1%204NS%20United%20Kingdom%20&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                  </div>
-                <div class="column" style="width: 50vw; align-self: center;">
-                  <div class="columns has-text-centered">
-                    <div class="column">
-                      <a href="https://www.instagram.com/hyperlinkhyperloop/" target="_blank">
-                        <span class="icon instagram"></span><br>
-                        Instagram
-                      </a>
-                    </div>
-                    <div class="column">
-                      <a href="https://www.facebook.com/HyperlinkHyperloop/" target="_blank">
-                        <span class="icon facebook"></span><br>
-                        Facebook
-                      </a>
-                    </div>
-                    <div class="column">
-                      <a href="https://www.linkedin.com/company/hyperlinkhyperloop" target="_blank">
-                        <span class="icon linkedin"></span><br>
-                        LinkedIn
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
         </div>
+      </div>
+      <div id="sponsors">
+        <span class="is-size-2">Sponsors</span>
+        <hr>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <p>
+              Hyperlink is set on designing and constructing the best possible pod and help to improve the technical
+              viability of the Hyperloop technology. The support of our partners and sponsors are essential for us to
+              achieve our goals. In return for sponsorship we are offering various advertising opportunities and the
+              possibility to be in touch with students of academic excellence, the leading engineers of tomorrow.
+            </p><br>
+            <p>
+              Let’s share our knowledge and build a sustainable future together
+            </p><br>
+            <p>
+              For enquiries, please contact <a class="sponsor-email"
+                href="mailto:partnerships.hyperlink@qmsu.org">partnerships.hyperlink@qmsu.org</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div id="contact">
+        <span class="is-size-2">Contact</span>
+        <hr>
+        <div class="columns">
+          <div class="column">
+            <p>
+              Queen Mary University of London<br>
+              School of Engineering and Materials Science<br>
+              Mile End Rd, Bethnal Green<br>
+              London E1 4NS<br>
+              United Kingdom<br>
+            </p><br>
+            <iframe class="map"
+              src="https://maps.google.com/maps?q=Queen%20Mary%20University%20of%20London%20%20%20%20%20%20%20%20%20%20%20%20%20School%20of%20Engineering%20and%20Materials%20Science%20Mile%20End%20Rd,%20Bethnal%20Green%20London%20E1%204NS%20United%20Kingdom%20&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          </div>
+          <div class="column flex-icons" style="margin: auto;">
+            <div class="columns has-text-centered">
+              <div class="column">
+                <a href="https://www.instagram.com/hyperlinkhyperloop/" target="_blank">
+                  <span class="icon instagram">
+                    <svg class="icon" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                  </span><br>
+                  Instagram
+                </a>
+              </div>
+              <div class="column">
+                <a href="https://www.facebook.com/HyperlinkHyperloop/" target="_blank">
+                  <span class="icon facebook">
+                    <svg class="icon" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" class="svg-inline--fa fa-facebook-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg>
+                  </span><br>
+                  Facebook
+                </a>
+              </div>
+              <div class="column">
+                <a href="https://www.linkedin.com/company/hyperlinkhyperloop" target="_blank">
+                  <span class="icon linkedin">
+                    <svg class="icon" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+                  </span><br>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="main.js"></script>
+  </div>
+  <script src="main.js"></script>
 </body>
 
 </html>
